@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Welcome <%=@user_first%>!!!</h1>
+    <p>Here is my <%= @random_number%> nd visitor!!!!</p>
+
+    <form action="/welcome" method="post">
+      <input type="hidden" name="auhtenticity_token" value="<%= form_authenticity_token %>">
+      <input type="text" name="First Name">
+      <input type="submit" name="Envoyer">
+    </form>
+  </body>
+</html>
